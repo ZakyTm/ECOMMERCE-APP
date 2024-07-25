@@ -10,9 +10,16 @@ class IntroPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Ecom App UI"),
       ),
-      body: const Center(
-        child: Text("HomePage"),
-      ),
+      body: Column(children: [
+        //logo
+        Image.asset("assets/images/logo_A_letter.png"),
+
+        // title
+
+        //sub title
+
+        //start now button
+      ]),
     );
   }
 }
