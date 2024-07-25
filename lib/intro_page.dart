@@ -10,16 +10,36 @@ class IntroPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Ecom App UI"),
       ),
-      body: Column(children: [
-        //logo
-        Image.asset("assets/images/logo_A_letter.png"),
+      body: Center(
+        child: Column(children: [
+          //logo
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Image.asset(
+              "assets/images/logo_A_letter.jpeg",
+              height: 240,
+            ),
+          ),
 
-        // title
+          const SizedBox(height: 48),
 
-        //sub title
+          // title
+          const Text("Just Do It",
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black)),
 
-        //start now button
-      ]),
+          //sub title
+          const Text(
+              "Brand new sneakers & shoes , we help you to find the best that suits you",
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.grey)),
+          //start now button
+        ]),
+      ),
     );
   }
 }
