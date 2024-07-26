@@ -1,7 +1,10 @@
+import 'package:ecommerce_app/hope_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class IntroPage extends StatelessWidget {
-  const IntroPage({Key? key}) : super(key: key);
+  const IntroPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,34 +14,59 @@ class IntroPage extends StatelessWidget {
         title: const Text("Ecom App UI"),
       ),
       body: Center(
-        child: Column(children: [
-          //logo
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Image.asset(
-              "assets/images/logo_A_letter.jpeg",
-              height: 240,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            //logo
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Image.asset(
+                "lib/images/logo_A_letter.jpeg",
+                height: 240,
+              ),
             ),
-          ),
 
-          const SizedBox(height: 48),
+            const SizedBox(height: 48),
 
-          // title
-          const Text("Just Do It",
-              style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black)),
+            // title
+            const Text("Just Do It",
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black)),
 
-          //sub title
-          const Text(
-              "Brand new sneakers & shoes , we help you to find the best that suits you",
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal,
-                  color: Colors.grey)),
-          //start now button
-        ]),
+            //sub title
+            const Text(
+                "Brand new sneakers & shoes , we help you to find the best that suits you",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.grey),
+                textAlign: TextAlign.center),
+
+            const SizedBox(height: 48),
+            //start now button
+
+            GestureDetector(
+              onTap: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HomePage())),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[900],
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                padding: const EdgeInsets.all(25),
+                child: const Center(
+                  child: Text('Shop Now',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white)),
+                ),
+              ),
+            ),
+          ]),
+        ),
       ),
     );
   }
