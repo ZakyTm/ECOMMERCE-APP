@@ -21,11 +21,11 @@ class BottomNavBar extends StatelessWidget {
           tabBorderRadius: 15,
           tabs: const [
             GButton(
-              icon: Icons.shop_2_rounded,
+              icon: Icons.home,
               text: 'Shop',
             ),
             GButton(
-              icon: Icons.shopping_cart,
+              icon: Icons.shop,
               text: 'Cart',
             ),
           ],

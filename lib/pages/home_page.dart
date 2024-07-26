@@ -38,6 +38,29 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavBar(
         onTabChange: (index) => navegateBottomBar(index),
       ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Builder(
+          builder: (context) => IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              }),
+        ),
+      ),
+      drawer: Drawer(
+          backgroundColor: Colors.grey[900],
+          child: Column(
+            children: [
+              //Logo
+
+              //Other pages we can go to from the drawer
+            ],
+          )),
       body: _pages[_selectedIndex],
     );
   }
