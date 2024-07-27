@@ -55,10 +55,54 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
           backgroundColor: Colors.grey[900],
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              //Logo
+              Column(
+                children: [
+                  //Logo
+                  DrawerHeader(
+                    child: Image.asset(
+                      'lib/images/one_logo.jpeg',
+                    ),
+                  ),
 
-              //Other pages we can go to from the drawer
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Divider(
+                      color: Colors.white,
+                    ),
+                  ),
+                  //Other pages we can go to from the drawer
+                  // Home Page
+                  const Padding(
+                    padding: EdgeInsets.only(left: 25),
+                    child: ListTile(
+                      leading: Icon(Icons.home, color: Colors.white),
+                      title:
+                          Text('Home', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+
+                  // About Page
+                  const Padding(
+                    padding: EdgeInsets.only(left: 25),
+                    child: ListTile(
+                      leading: Icon(Icons.info, color: Colors.white),
+                      title:
+                          Text('About', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                  // Click to log out
+                  const Padding(
+                    padding: EdgeInsets.only(left: 25.0, bottom: 25.0),
+                    child: ListTile(
+                      leading: Icon(Icons.logout, color: Colors.white),
+                      title: Text('Log Out',
+                          style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                ],
+              ),
             ],
           )),
       body: _pages[_selectedIndex],
