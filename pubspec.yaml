@@ -63,6 +63,12 @@ flutter:
   assets:
     - lib/images/logo_A_letter.jpeg
     - lib/images/one_logo.jpeg
+    - lib/images/shoe1.jpeg
+    - lib/images/shoe2.jpeg
+    - lib/images/shoe3.jpeg
+    - lib/images/shoe4.jpeg
+    - lib/images/shoe5.jpeg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
