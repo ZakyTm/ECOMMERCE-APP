@@ -12,6 +12,19 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  //add show to cart
+  void addShoeToCart(Shoe shoe) {
+    Provider.of<Cart>(context, listen: false).addItemtoCart(shoe);
+
+    //alert the user we add the shoe succussfully
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Shoe added to cart'),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
@@ -72,7 +85,8 @@ class _ShopPageState extends State<ShopPage> {
                       itemBuilder: (context, index) {
                         //Get the shoe from the shop list
                         Shoe shoe = value.shoeList()[index];
-                        return ShoeTile(shoe: shoe);
+                        return ShoeTile(
+                            shoe: shoe, onTap: () => addShoeToCart(shoe));
                       }),
                 ),
                 const Padding(

@@ -22,7 +22,7 @@ class Cart extends ChangeNotifier {
         price: '210',
         description: 'just for Wealthy People'),
     Shoe(
-        name: 'Shoe 4 Mark Anonymus',
+        name: 'Shoe 4 Mark',
         imagePath: 'lib/images/shoe4.jpeg',
         price: '234',
         description: 'Limited Edition'),
